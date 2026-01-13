@@ -1,28 +1,16 @@
-# Production Dependencies for Todo Full-Stack Application
-
-# Web Framework
+# Production requirements only - optimized for deployment
 fastapi>=0.109.0
 uvicorn[standard]>=0.27.0
 python-multipart>=0.0.9
-
-# Database
 sqlalchemy>=2.0.25
 sqlmodel>=0.0.14
 alembic>=1.13.1
-
-# Validation
 pydantic>=2.5.3
 pydantic-settings>=2.1.0
 email-validator>=2.1.0
-
-# Authentication
 bcrypt>=4.1.2
 python-jose[cryptography]>=3.3.0
 passlib[bcrypt]>=1.7.4
-
-# AI Services
 google-generativeai>=0.4.0
 elevenlabs>=1.0.0
-
-# Environment
 python-dotenv>=1.0.0

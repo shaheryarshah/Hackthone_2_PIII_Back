@@ -1,0 +1,55 @@
+# Ignore local database files
+*.db
+*.db-shm
+*.db-wal
+
+# Ignore local environment files
+.env
+.env.local
+.env.development
+.env.test
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Ignore virtual environments
+venv/
+env/
+.venv/
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore tests
+tests/
+test_*.py
+*_test.py
+
+# Ignore logs
+*.log
+logs/
+
+# Ignore node modules (if any)
+node_modules/
+
+# Ignore git files
+.git/
+.gitignore
+
+# Ignore temporary files
+tmp*/
+temp*/
+*.tmp
+*.temp
