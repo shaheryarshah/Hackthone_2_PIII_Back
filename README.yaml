@@ -1,0 +1,28 @@
+---
+title: Todo Backend API
+emoji: 📝
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+python_version: "3.11"
+pinned: false
+license: mit
+---
+
+# Todo Backend API
+
+This is a FastAPI backend for a Todo application with extended features.
+
+## About
+
+This space demonstrates a full-featured Todo backend API built with FastAPI, SQLAlchemy, and includes AI integration features.
+
+## Features
+
+- CRUD operations for todos
+- User authentication
+- Advanced filtering and search
+- AI-powered features
+- Recurring tasks
+- Priority management
+- Due dates and reminders
