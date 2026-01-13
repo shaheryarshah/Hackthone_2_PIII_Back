@@ -17,6 +17,7 @@ from typing import Optional
 from fastapi import FastAPI, Depends, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
+from mangum import Mangum  # ADDED THIS IMPORT
 
 from database import get_db, engine, Base
 from models.todo import Todo
@@ -44,7 +45,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:3001", "http://localhost:3002", "http://localhost:3006", "http://localhost:3007"],
+    allow_origins=["http://localhost:3000", "http://localhost:3001", "http://localhost:3002", "http://localhost:3006", "http://localhost:3007", "https://shaheryarshah.github.io"], # Added your GH Pages domain
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -57,6 +58,9 @@ app.include_router(auth_router, prefix="/api/v1")
 app.include_router(chat_router)
 app.include_router(task_router, prefix="/api/v1")
 
+# ADDED THIS FOR NETLIFY
+# This allows Netlify to treat your FastAPI app as a serverless function
+handler = Mangum(app)
 
 def _calculate_overdue(todo: Todo) -> bool:
     """Calculate if a todo is overdue."""
