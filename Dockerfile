@@ -20,4 +20,4 @@ COPY . /app/
 EXPOSE $PORT
 
 # Run the application
-CMD ["sh", "-c", "python app.py"]
+CMD ["sh", "-c", "python gradio_interface.py"]
